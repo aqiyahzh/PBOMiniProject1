@@ -15,10 +15,12 @@ Kelas ini berfungsi sebagai titik masuk utama untuk menjalankan program.
 
 LayananDonasi: Kelas yang bertanggung jawab untuk menangani semua logika bisnis terkait dengan manajemen donasi dan donatur.
 Scanner: Digunakan untuk membaca input dari pengguna.
+
 Variabel 
 - donationService: Objek dari kelas LayananDonasi yang digunakan untuk memanggil metode yang terkait dengan donasi dan donatur.
 - scanner: Objek dari kelas Scanner untuk menerima input dari pengguna.
 running: Variabel boolean untuk mengontrol jalannya program utama.
+
 Metode "main"
 Metode ini mencakup logika utama dari program. Menampilkan menu utama dan memberikan opsi untuk:
 1. Menu Donatur
