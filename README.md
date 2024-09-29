@@ -4,6 +4,7 @@ Program ini adalah Sistem Manajemen Donasi Online yang memungkinkan pengguna unt
 ### Struktur Program
 Program ini terdiri dari dua menu utama:
 ![image](https://github.com/user-attachments/assets/def121a6-3958-48d8-8cc1-fe02430f2302)
+
 Menu Donatur: Mengelola data donatur.
 Menu Donasi: Mengelola data donasi.
 Pengguna dapat memilih opsi dari menu untuk melakukan operasi yang diinginkan. Operasi ini memanggil layanan (service) dari kelas LayananDonasi.
@@ -11,13 +12,14 @@ Pengguna dapat memilih opsi dari menu untuk melakukan operasi yang diinginkan. O
 #### Kelas Utama: main
 Kelas ini berfungsi sebagai titik masuk utama untuk menjalankan program.
 ![image](https://github.com/user-attachments/assets/12e8c84a-7383-4364-aa52-b346d04a7160)
+
 LayananDonasi: Kelas yang bertanggung jawab untuk menangani semua logika bisnis terkait dengan manajemen donasi dan donatur.
 Scanner: Digunakan untuk membaca input dari pengguna.
-VARIABEL
+- VARIABEL
 donationService: Objek dari kelas LayananDonasi yang digunakan untuk memanggil metode yang terkait dengan donasi dan donatur.
 scanner: Objek dari kelas Scanner untuk menerima input dari pengguna.
 running: Variabel boolean untuk mengontrol jalannya program utama.
-METODE MAIN
+- METODE MAIN
 Metode ini mencakup logika utama dari program. Menampilkan menu utama dan memberikan opsi untuk:
 1. Menu Donatur
 2. Menu Donasi
@@ -36,13 +38,17 @@ Kembali ke Menu Utama: Kembali ke menu utama.
 Beberapa Contoh Operasi Donatur:
 Menambah Donatur:
 ![image](https://github.com/user-attachments/assets/85fdab9b-d438-4d00-91c5-ca39e3989b1b)
+
 Pengguna diminta memasukkan nama dan email donatur, lalu metode ini akan menambah donatur ke sistem.
 Memperbarui Donatur:
 ![image](https://github.com/user-attachments/assets/21b7cad2-1cae-408f-ac39-a1d484e10144)
+
 Pengguna diminta memasukkan nama donatur yang ingin diperbarui beserta data baru.
 
 #### Menu Donasi
 Metode manageDonations() mengelola semua interaksi yang terkait dengan donasi. Menu ini menyediakan opsi untuk:
+![image](https://github.com/user-attachments/assets/0f93058b-5a21-4cbb-8935-66969f5605e3)
+
 1. Tambah Donasi: Menambah data donasi baru berdasarkan nama donatur.
 2. Lihat Daftar Donasi: Menampilkan semua donasi yang ada.
 3. Perbarui Donasi: Memperbarui jumlah donasi untuk donatur yang telah ada.
@@ -51,14 +57,17 @@ Metode manageDonations() mengelola semua interaksi yang terkait dengan donasi. M
 
 Contoh Operasi Donasi:
 Menambah Donasi:
-donationService.tambahDonasi(donorName, amount);
+![image](https://github.com/user-attachments/assets/e76e7675-10c3-41ce-887d-6d4d2fa30a09)
+
 Pengguna diminta memasukkan nama donatur dan jumlah donasi yang akan ditambahkan.
 Memperbarui Donasi:
-donationService.perbaruiDonasi(nameToUpdate, newAmount);
+![image](https://github.com/user-attachments/assets/6157e605-0c38-4958-9cbb-7554ebad4c0e)
+
 Pengguna diminta memasukkan nama donatur yang ingin diperbarui beserta jumlah donasi yang baru.
 
 #### Penanganan Input Salah
-Untuk setiap menu, jika pengguna memasukkan input yang tidak valid, program akan memberikan pesan kesalahan dan meminta pengguna untuk mengulang masukan.
+Untuk setiap menu, jika pengguna memasukkan input yang tidak valid, program akan memberikan pesan "PILIHAN TIDAK VALID" dan meminta pengguna untuk mengulang.
 
 #### Penutupan Program
 Ketika pengguna memilih untuk keluar (case 3 dalam menu utama), program akan menutup sesi input Scanner dan mengakhiri proses.
+![image](https://github.com/user-attachments/assets/a05005fd-6e83-40c8-86ab-8d3f0e55c789)
