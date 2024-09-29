@@ -41,14 +41,14 @@ public class LayananDonasi {
     }
 
     public void daftarSemuaDonatur() {
-        if (donatur.isEmpty()) {
-            System.out.println("Tidak ada donatur tersedia.");
-        } else {
-            for (Donatur donor : donatur) {
-                System.out.println(donor);
-            }
+    if (donatur.isEmpty()) {
+        System.out.println("Tidak ada donatur tersedia.");
+    } else {
+        for (Donatur donor : donatur) {
+            System.out.println("Nama: " + donor.getName() + ", Email: " + donor.getEmail());
         }
     }
+}
 
     private Donatur cariDonaturBerdasarkanNama(String nama) {
         for (Donatur donor : donatur) {
@@ -86,14 +86,15 @@ public class LayananDonasi {
     }
 
     public void daftarSemuaDonasi() {
-        if (donasi.isEmpty()) {
-            System.out.println("Tidak ada donasi tersedia.");
-        } else {
-            for (Donasi donation : donasi) {
-                System.out.println(donation);
-            }
+    if (donasi.isEmpty()) {
+        System.out.println("Tidak ada donasi tersedia.");
+    } else {
+        for (Donasi donasi : donasi) {
+            System.out.println("Nama Donatur: " + donasi.getDonorName() + ", Jumlah Donasi: " + donasi.getAmount());
         }
     }
+}
+
 
     private Donasi cariDonasiBerdasarkanNamaDonatur(String namaDonatur) {
         for (Donasi donation : donasi) {
